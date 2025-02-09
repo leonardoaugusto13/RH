@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["base_fake_dados","Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.138.1004.0 (24.11)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table base_fake_dados
+ref table DateTableTemplate_05311b29-50a6-4733-8c40-c790bd6ea9f5
+ref table LocalDateTable_1c2c75d7-f94f-470f-aa69-cd9b168ef3c0
+ref table Medidas
+
+ref cultureInfo pt-BR
+

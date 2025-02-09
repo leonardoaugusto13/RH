@@ -1,0 +1,5 @@
+relationship a9cb8fa9-3f9e-4cea-8559-4d8dc39d3bdc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: base_fake_dados.'Data de Nascimento'
+	toColumn: LocalDateTable_1c2c75d7-f94f-470f-aa69-cd9b168ef3c0.Date
+

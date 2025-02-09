@@ -1,0 +1,96 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.60\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "799e05bfa1b64eae9a5a",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"144b2453cca7dcdeccea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1039.4725274725274,\"y\":40.79120879120879,\"z\":4,\"width\":225.05494505494505,\"height\":132.21978021978023,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.idade_media\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"idade_media\"},\"Name\":\"Medidas.idade_media\",\"NativeReferenceName\":\"idade_media\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"idade_media\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.22,
+          "width": 225.05,
+          "x": 1039.47,
+          "y": 40.79,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"49165feba09da4915630\",\"layouts\":[{\"id\":0,\"position\":{\"x\":49.29460580912863,\"y\":192.69709543568467,\"z\":5,\"width\":478.00829875518673,\"height\":489.9585062240664,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"base_fake_dados.Setor de Atuação\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Qtd_funcionarios\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"base_fake_dados\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Setor de Atuação\"},\"Name\":\"base_fake_dados.Setor de Atuação\",\"NativeReferenceName\":\"Setor de Atuação\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Qtd_funcionarios\"},\"Name\":\"Medidas.Qtd_funcionarios\",\"NativeReferenceName\":\"Qtd_funcionarios\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Qtd_funcionarios\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 489.96,
+          "width": 478.01,
+          "x": 49.29,
+          "y": 192.70,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"54278c65036c091c35e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":745.3941908713693,\"y\":40.331950207468886,\"z\":3,\"width\":312.1991701244813,\"height\":132.94605809128632,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.salario_medio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"salario_medio\"},\"Name\":\"Medidas.salario_medio\",\"NativeReferenceName\":\"salario_medio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"salario_medio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.95,
+          "width": 312.20,
+          "x": 745.39,
+          "y": 40.33,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"84d11ccfeabd087c05a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.8547717842324,\"y\":40.331950207468886,\"z\":0,\"width\":225.56016597510376,\"height\":132.94605809128632,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.funcionarios_M\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"funcionarios_M\"},\"Name\":\"Medidas.funcionarios_M\",\"NativeReferenceName\":\"funcionarios_M\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"funcionarios_M\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.95,
+          "width": 225.56,
+          "x": 274.85,
+          "y": 40.33,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8820cb11038ca9d4de09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":575.103734439834,\"y\":192.69709543568467,\"z\":6,\"width\":612.448132780083,\"height\":230.04149377593362,\"tabOrder\":6}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"base_fake_dados.Cargo\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.salario_medio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"base_fake_dados\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"salario_medio\"},\"Name\":\"Medidas.salario_medio\",\"NativeReferenceName\":\"salario_medio\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cargo\"},\"Name\":\"base_fake_dados.Cargo\",\"NativeReferenceName\":\"Cargo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"salario_medio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 230.04,
+          "width": 612.45,
+          "x": 575.10,
+          "y": 192.70,
+          "z": 6.00
+        },
+        {
+          "config": "{\"name\":\"9fa33c20ac050cd861cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":527.3029045643154,\"y\":40.331950207468886,\"z\":2,\"width\":224.0663900414938,\"height\":132.94605809128632,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.funcionarios_F\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"funcionarios_F\"},\"Name\":\"Medidas.funcionarios_F\",\"NativeReferenceName\":\"funcionarios_F\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"funcionarios_F\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.95,
+          "width": 224.07,
+          "x": 527.30,
+          "y": 40.33,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"abb858f04577720c6b07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.36929460580913,\"y\":40.331950207468886,\"z\":1,\"width\":225.56016597510376,\"height\":132.94605809128632,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Qtd_funcionarios\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Qtd_funcionarios\"},\"Name\":\"Medidas.Qtd_funcionarios\",\"NativeReferenceName\":\"Qtd_funcionarios\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Qtd_funcionarios\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.95,
+          "width": 225.56,
+          "x": 31.37,
+          "y": 40.33,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
