@@ -125,6 +125,16 @@ table base_fake_dados
 
 		annotation SummarizationSetBy = Automatic
 
+	column Tempo_de_casa(Anos) = ```
+			round(base_fake_dados[Tempo_de_casa(Dias)]/365,1) 
+			```
+		lineageTag: 75a8d47a-9ca7-455c-bcc8-3fb2488f444e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition base_fake_dados = m
 		mode: import
 		source = ```

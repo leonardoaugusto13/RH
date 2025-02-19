@@ -30,7 +30,7 @@ table Medidas
 	measure salario_medio =
 			
 			AVERAGE(base_fake_dados[Salário])
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: c444754b-4a68-40e5-b470-9775d13fd3a0
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -40,6 +40,79 @@ table Medidas
 		lineageTag: f009bc72-4a61-4f19-a904-93e1fb3f44b4
 
 		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure TempoDeCasa = AVERAGE(base_fake_dados[Tempo_de_casa(Dias)])/365
+		lineageTag: a884f082-6286-4a29-b154-4ebe59367f4f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qtd_funcionarios_admitidos MoM%' =
+			
+			IF(
+				ISFILTERED('base_fake_dados'[Data_admissao]),
+				ERROR("Medidas rápidas de inteligência de tempo somente podem ser agrupadas ou filtradas pela hierarquia de data fornecida pelo Power BI ou pela coluna de data primária."),
+				VAR __PREV_MONTH =
+					CALCULATE(
+						[Qtd_funcionarios],
+						DATEADD('base_fake_dados'[Data_admissao].[Date], -1, MONTH)
+					)
+				RETURN
+					DIVIDE([Qtd_funcionarios] - __PREV_MONTH, __PREV_MONTH)
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3f19b10e-2e27-45d8-9034-86d9d20ae70a
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MonthOverMonth"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Qtd_funcionarios_desligados MoM%' =
+			
+			IF(
+				ISFILTERED('base_fake_dados'[Data_admissao]),
+				ERROR("Medidas rápidas de inteligência de tempo somente podem ser agrupadas ou filtradas pela hierarquia de data fornecida pelo Power BI ou pela coluna de data primária."),
+				VAR __PREV_MONTH =
+					CALCULATE(
+						[Qtd_funcionarios],
+						DATEADD('base_fake_dados'[data_demissão].[Date], -1, MONTH)
+					)
+				RETURN
+					DIVIDE([Qtd_funcionarios] - __PREV_MONTH, __PREV_MONTH)
+			)
+		lineageTag: f031cd7e-bf29-41da-abf9-4f465fe284eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Qtd_desligamentos = ```
+			
+			
+			CALCULATE(
+			    [Qtd_funcionarios], 
+			    FILTER(base_fake_dados , base_fake_dados[data_demissão] <> BLANK()))
+			```
+		formatString: 0
+		lineageTag: 8c345f8f-568f-4f56-8657-220c5c3978bf
+
+	measure 'salario MoM%' =
+			
+			IF(
+				ISFILTERED('base_fake_dados'[Data_admissao]),
+				ERROR("Medidas rápidas de inteligência de tempo somente podem ser agrupadas ou filtradas pela hierarquia de data fornecida pelo Power BI ou pela coluna de data primária."),
+				VAR __PREV_MONTH =
+					CALCULATE(
+						[salario_medio],
+						DATEADD('base_fake_dados'[Data_admissao].[Date], -1, MONTH)
+					)
+				RETURN
+					DIVIDE([salario_medio] - __PREV_MONTH, __PREV_MONTH)
+			)
+		lineageTag: 113bf8d9-77af-4cd0-a30a-460e78433fa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Medidas = m
 		mode: import
