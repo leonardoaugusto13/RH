@@ -1,5 +1,15 @@
-relationship a9cb8fa9-3f9e-4cea-8559-4d8dc39d3bdc
+relationship 3854154d-1dab-48dc-a223-3164d53b3518
 	joinOnDateBehavior: datePartOnly
 	fromColumn: base_fake_dados.'Data de Nascimento'
-	toColumn: LocalDateTable_1c2c75d7-f94f-470f-aa69-cd9b168ef3c0.Date
+	toColumn: LocalDateTable_4f323066-053c-4cc9-af01-2fa5064fe2fc.Date
+
+relationship 528ea88f-af33-4c76-8ec8-25dec7b18718
+	joinOnDateBehavior: datePartOnly
+	fromColumn: base_fake_dados.Data_admissao
+	toColumn: LocalDateTable_e6e72222-c7bf-4bbb-9ae9-cfc65829e0f0.Date
+
+relationship 5aced8b7-13f8-4dec-a090-7bd07787f1eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: base_fake_dados.data_demissão
+	toColumn: LocalDateTable_5e999306-de29-4428-ae20-580ae0f8a378.Date
 

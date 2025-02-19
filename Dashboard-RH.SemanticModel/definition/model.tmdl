@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["base_fake_dados","Medidas"]
+annotation PBI_QueryOrder = ["Medidas","base_fake_dados"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -14,10 +14,12 @@ annotation PBIDesktopVersion = 2.138.1004.0 (24.11)
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table base_fake_dados
-ref table DateTableTemplate_05311b29-50a6-4733-8c40-c790bd6ea9f5
-ref table LocalDateTable_1c2c75d7-f94f-470f-aa69-cd9b168ef3c0
 ref table Medidas
+ref table base_fake_dados
+ref table DateTableTemplate_31a5b99c-b31d-4f52-b22b-c61e2113c589
+ref table LocalDateTable_4f323066-053c-4cc9-af01-2fa5064fe2fc
+ref table LocalDateTable_e6e72222-c7bf-4bbb-9ae9-cfc65829e0f0
+ref table LocalDateTable_5e999306-de29-4428-ae20-580ae0f8a378
 
 ref cultureInfo pt-BR
 

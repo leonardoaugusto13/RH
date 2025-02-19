@@ -1,10 +1,10 @@
 table base_fake_dados
-	lineageTag: 6981729c-bc4d-42f6-9520-71d970de036b
+	lineageTag: 5a7b8c4a-2756-414e-a13b-8fe1def566a1
 
 	column ID
 		dataType: int64
 		formatString: 0
-		lineageTag: 566c1523-08a9-4464-a090-90688d8b8362
+		lineageTag: 14f45807-dea5-48c3-8263-ab6b68043ac0
 		summarizeBy: count
 		sourceColumn: ID
 
@@ -12,7 +12,7 @@ table base_fake_dados
 
 	column Nome
 		dataType: string
-		lineageTag: 9e4afe84-6180-4431-a4c1-27bf18cc8aef
+		lineageTag: de920ab1-26e6-4510-a8fe-64c785c8949b
 		summarizeBy: none
 		sourceColumn: Nome
 
@@ -21,14 +21,14 @@ table base_fake_dados
 	column 'Data de Nascimento'
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 4b745915-a710-436f-81dd-085e2a876b44
+		lineageTag: 811dc0cc-1b59-4cd1-b16c-aaedbe2cd991
 		summarizeBy: none
 		sourceColumn: Data de Nascimento
 
 		variation Variation
 			isDefault
-			relationship: a9cb8fa9-3f9e-4cea-8559-4d8dc39d3bdc
-			defaultHierarchy: LocalDateTable_1c2c75d7-f94f-470f-aa69-cd9b168ef3c0.'Hierarquia de datas'
+			relationship: 3854154d-1dab-48dc-a223-3164d53b3518
+			defaultHierarchy: LocalDateTable_4f323066-053c-4cc9-af01-2fa5064fe2fc.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -36,26 +36,24 @@ table base_fake_dados
 
 	column Cargo
 		dataType: string
-		lineageTag: c04d9902-eec7-4661-b4c9-f4e59f7476a3
+		lineageTag: c1b5d39a-f7b2-4858-9e20-da18ec289203
 		summarizeBy: none
 		sourceColumn: Cargo
 
 		annotation SummarizationSetBy = Automatic
 
 	column Salário
-		dataType: decimal
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
-		lineageTag: b07e3644-19b9-47fa-8432-c55cdcb8abf3
+		dataType: double
+		formatString: 0
+		lineageTag: 01172dbb-7302-48fa-a847-a788106afa64
 		summarizeBy: sum
 		sourceColumn: Salário
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
 	column Sexo
 		dataType: string
-		lineageTag: b5aaded3-0d5e-4271-ad68-9060b8b703db
+		lineageTag: 4c644233-81b1-461b-9002-8740466eafc5
 		summarizeBy: none
 		sourceColumn: Sexo
 
@@ -63,33 +61,118 @@ table base_fake_dados
 
 	column 'Setor de Atuação'
 		dataType: string
-		lineageTag: 2deea544-fd67-46d2-bc10-f0b280502036
+		lineageTag: 61dde2c8-8b19-4bb1-9d54-f4962e7a09cf
 		summarizeBy: none
 		sourceColumn: Setor de Atuação
 
 		annotation SummarizationSetBy = Automatic
 
+	column Data_admissao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bba473d2-8ba8-48b6-b41a-68b4399ff18d
+		summarizeBy: none
+		sourceColumn: Data_admissao
+
+		variation Variation
+			isDefault
+			relationship: 528ea88f-af33-4c76-8ec8-25dec7b18718
+			defaultHierarchy: LocalDateTable_e6e72222-c7bf-4bbb-9ae9-cfc65829e0f0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_demissão
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3a75c157-1155-4d2b-ad94-8103adf87b23
+		summarizeBy: none
+		sourceColumn: data_demissão
+
+		variation Variation
+			isDefault
+			relationship: 5aced8b7-13f8-4dec-a090-7bd07787f1eb
+			defaultHierarchy: LocalDateTable_5e999306-de29-4428-ae20-580ae0f8a378.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Idade
 		dataType: int64
 		formatString: 0
-		lineageTag: f37bd59b-6595-4905-acfe-fe3930c96844
+		lineageTag: 1ecbc407-1bda-4bb0-99b6-1bfd14875aba
 		summarizeBy: sum
 		sourceColumn: Idade
 
 		annotation SummarizationSetBy = Automatic
 
+	column Vigente
+		dataType: string
+		lineageTag: e23b70b1-8b44-4483-a63d-f1367e406398
+		summarizeBy: none
+		sourceColumn: Vigente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tempo_de_casa(Dias)
+		dataType: int64
+		formatString: 0
+		lineageTag: 8835c5be-7e2a-4172-bfed-309d3b28a42b
+		summarizeBy: sum
+		sourceColumn: Tempo_de_casa(Dias)
+
+		annotation SummarizationSetBy = Automatic
+
 	partition base_fake_dados = m
 		mode: import
-		source =
+		source = ```
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\user\Desktop\GitLeo\DashboardRh-Correto\RH\arquivos_csv\base_fake_dados.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Valor Substituído" = Table.ReplaceValue(#"Cabeçalhos Promovidos",".",",",Replacer.ReplaceText,{"Salário"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"ID", Int64.Type}, {"Nome", type text}, {"Data de Nascimento", type date}, {"Cargo", type text}, {"Salário", Currency.Type}, {"Sexo", type text}, {"Setor de Atuação", type text}}),
-				    #"Idade Inserida" = Table.AddColumn(#"Tipo Alterado", "Idade", each (Date.From(DateTime.LocalNow()) - [Data de Nascimento])/365, type duration),
-				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Idade Inserida",{{"Idade", Int64.Type}})
+				    Fonte = Csv.Document(
+				        File.Contents("C:\Users\user\Desktop\GitLeo\DashboardRh-Correto\RH\arquivos_csv\base_fake_dados.csv"), 
+				        [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]
+				    ),
+				    // Promove os cabeçalhos
+				    Dados = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    
+				    // Substitui "." por "," na coluna Salário
+				    DadosCorrigidos = Table.ReplaceValue(Dados, ".", ",", Replacer.ReplaceText, {"Salário"}),
+				
+				    // Altera os tipos das colunas
+				    TiposCorrigidos = Table.TransformColumnTypes(DadosCorrigidos, {
+				        {"ID", Int64.Type}, 
+				        {"Nome", type text}, 
+				        {"Data de Nascimento", type date}, 
+				        {"Cargo", type text}, 
+				        {"Salário", type number}, 
+				        {"Sexo", type text}, 
+				        {"Setor de Atuação", type text}, 
+				        {"Data_admissao", type date}, 
+				        {"data_demissão", type nullable date} // Permite valores nulos
+				    }),
+				
+				    // Calcula a idade diretamente em anos
+				    IdadeCalculada = Table.AddColumn(TiposCorrigidos, "Idade", 
+				        each Number.Round(Duration.TotalDays(Date.From(DateTime.LocalNow()) - [Data de Nascimento]) / 365), 
+				        Int64.Type
+				    ),
+				
+				    // Adiciona a coluna "Vigente"
+				    StatusVigente = Table.AddColumn(IdadeCalculada, "Vigente", 
+				        each if [data_demissão] <> null then "Desligado" else "Ativo", 
+				        type text
+				    ),
+				
+				    // Calcula o tempo de casa em dias
+				    TempoDeCasa = Table.AddColumn(StatusVigente, "Tempo_de_casa(Dias)", 
+				        each try Duration.Days([data_demissão] - [Data_admissao]) otherwise null, 
+				        Int64.Type
+				    )
+				
 				in
-				    #"Tipo Alterado1"
+				    TempoDeCasa
+				```
 
 	annotation PBI_NavigationStepName = Navegação
 
