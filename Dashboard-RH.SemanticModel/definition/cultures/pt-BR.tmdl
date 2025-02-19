@@ -40,6 +40,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Colaboradores": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -108,6 +118,16 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Média Salarial": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -231,6 +251,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "Média de Idade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2227,69 +2257,183 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.Qtd_funcionarios_admitidos_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd_funcionarios_admitidos MoM%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Qtd_funcionarios_admitidos MoM%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd_funcionarios_admitido mom percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "qtd_funcionarios_admitido mom pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.Qtd_funcionarios_desligados_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd_funcionarios_desligados MoM%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Qtd_funcionarios_desligados MoM%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd_funcionarios_desligado mom percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "qtd_funcionarios_desligado mom pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.qtd_desligamentos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd_desligamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd desligamentos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Qtd_desligamentos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.salario_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "salario MoM%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario MoM%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario mom percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "salario mom pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "base_fake_dado.Tempo_de_casaanos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "base_fake_dados",
+			          "ConceptualProperty": "Tempo_de_casa(Anos)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tempo_de_casa(anos)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tempo_de_casa(ano)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Tempo_de_casa": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "base_fake_dado_is_named_ID": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_trimestre_has_base_fake_dado_data_demissão_variation_hierarquia_de_data_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
 			          "Target": {
-			            "Entity": "base_fake_dado"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			          }
 			        },
-			        "base_fake_dado.ID": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê": {
 			          "Target": {
-			            "Entity": "base_fake_dado.ID"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Name": {
-			              "Role": "base_fake_dado.ID"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ID_are_names_IDs_of_base_fake_dadoes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.ID"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_ID"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_qtd_funcionarios": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.qtd_funcionarios": {
-			          "Target": {
-			            "Entity": "medida.qtd_funcionarios"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			          }
 			        }
 			      },
@@ -2297,802 +2441,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            },
 			            "Object": {
-			              "Role": "medida.qtd_funcionarios"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_qtd_funcionarios"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_funcionarios_M": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.funcionarios_M": {
-			          "Target": {
-			            "Entity": "medida.funcionarios_M"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "medida.funcionarios_M"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_funcionarios_M"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_funcionarios_F": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.funcionarios_F": {
-			          "Target": {
-			            "Entity": "medida.funcionarios_F"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "medida.funcionarios_F"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_funcionarios_F"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_salario_medio": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.salario_medio": {
-			          "Target": {
-			            "Entity": "medida.salario_medio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "medida.salario_medio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_salario_medio"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_idade_media": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.idade_media": {
-			          "Target": {
-			            "Entity": "medida.idade_media"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "medida.idade_media"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_idade_media"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_medida_tempo_de_casa": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "medida.tempo_de_casa": {
-			          "Target": {
-			            "Entity": "medida.tempo_de_casa"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "medida.tempo_de_casa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_tempo_de_casa"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_nome": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.nome": {
-			          "Target": {
-			            "Entity": "base_fake_dado.nome"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.nome"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_nome"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_data_de_nascimento": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_data_de_nascimentos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_cargo": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.cargo": {
-			          "Target": {
-			            "Entity": "base_fake_dado.cargo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.cargo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_cargoes"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_salário": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.salário": {
-			          "Target": {
-			            "Entity": "base_fake_dado.salário"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.salário"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_salários"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_sexo": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.sexo": {
-			          "Target": {
-			            "Entity": "base_fake_dado.sexo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.sexo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_sexos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_setor_de_atuação": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.setor_de_atuação": {
-			          "Target": {
-			            "Entity": "base_fake_dado.setor_de_atuação"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.setor_de_atuação"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_setor_de_atuaçãos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_data_admissao": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.data_admissao": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_admissao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_data_admissaos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_data_demissão": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.data_demissão": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_data_demissãos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_idade": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.idade": {
-			          "Target": {
-			            "Entity": "base_fake_dado.idade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.idade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_idades"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_vigente": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.vigente": {
-			          "Target": {
-			            "Entity": "base_fake_dado.vigente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.vigente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_vigentes"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_has_Tempo_de_casadias": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado": {
-			          "Target": {
-			            "Entity": "base_fake_dado"
-			          }
-			        },
-			        "base_fake_dado.Tempo_de_casadias": {
-			          "Target": {
-			            "Entity": "base_fake_dado.Tempo_de_casadias"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.Tempo_de_casadias"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_fake_dadoes_have_Tempo_de_casadias"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_has_variation_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_de_nascimentos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_ano_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_trimestre_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			          }
-			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -3102,10 +2454,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -3115,7 +2467,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			            },
 			            "Prepositions": [
 			              {
@@ -3125,29 +2477,29 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres"
+			          "ID": "mê_are_in_trimestres2"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_mê_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_dia": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_ano_has_base_fake_dado_data_demissão_variation_hierarquia_de_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
 			          }
 			        },
-			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			          }
 			        }
 			      },
@@ -3155,33 +2507,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            },
 			            "Prepositions": [
 			              {
@@ -3191,29 +2543,29 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê"
+			          "ID": "trimestres_are_in_anos2"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_admissao_has_variation_hierarquia_de_data": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_admissao": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			          }
 			        },
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia"
 			          }
 			        }
 			      },
@@ -3221,32 +2573,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_admissaos_have_hierarquia_de_data"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_ano": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			          }
 			        },
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			          }
 			        }
 			      },
@@ -3254,32 +2606,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_trimestre": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			          }
 			        },
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			          }
 			        }
 			      },
@@ -3287,60 +2639,93 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_mê": {
+			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
 			          }
 			        },
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_demissão_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_demissão": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_demissão"
+			          }
+			        },
+			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_demissão"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_demissãos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_mê_has_base_fake_dado_data_admissao_variation_hierarquia_de_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
 			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê": {
 			          "Target": {
 			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
 			          }
 			        },
 			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia": {
@@ -3353,7 +2738,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
 			            },
 			            "Object": {
 			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
@@ -3361,58 +2746,25 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_ano_has_base_fake_dado_data_admissao_variation_hierarquia_de_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
-			          }
-			        },
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
 			            },
 			            "Prepositions": [
 			              {
@@ -3422,12 +2774,12 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos1"
+			          "ID": "dias_are_in_mê1"
 			        }
 			      ]
 			    },
@@ -3497,15 +2849,81 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_mê_has_base_fake_dado_data_admissao_variation_hierarquia_de_data_dia": {
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_ano_has_base_fake_dado_data_admissao_variation_hierarquia_de_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê": {
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			          }
+			        },
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos1"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
 			          }
 			        },
 			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia": {
@@ -3518,10 +2936,175 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
 			            },
 			            "Object": {
 			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias1"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê1"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_variation_hierarquia_de_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos1"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_admissao_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_admissao": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao"
+			          }
+			        },
+			        "base_fake_dado.data_admissao.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_admissao"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_admissaos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_mê_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
 			            }
 			          },
 			          "State": "Generated",
@@ -3531,10 +3114,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -3544,7 +3127,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.dia"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
 			            },
 			            "Prepositions": [
 			              {
@@ -3554,29 +3137,29 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_fake_dado.data_admissao.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê1"
+			          "ID": "dias_are_in_mê"
 			        }
 			      ]
 			    },
-			    "base_fake_dado_data_demissão_has_variation_hierarquia_de_data": {
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_trimestre_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "base_fake_dados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_fake_dado.data_demissão": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão"
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
 			          }
 			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
 			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			          }
 			        }
 			      },
@@ -3584,241 +3167,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_demissãos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_has_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_ano_has_base_fake_dado_data_demissão_variation_hierarquia_de_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos2"
-			        }
-			      ]
-			    },
-			    "base_fake_dado_data_demissão_variation_hierarquia_de_data_trimestre_has_base_fake_dado_data_demissão_variation_hierarquia_de_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "base_fake_dados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			          }
-			        },
-			        "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê": {
-			          "Target": {
-			            "Entity": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -3828,10 +3180,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			            },
 			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -3841,7 +3193,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.mê"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
 			            },
 			            "Prepositions": [
 			              {
@@ -3851,12 +3203,1015 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_fake_dado.data_demissão.variation.hierarquia_de_data.trimestre"
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres2"
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_ano_has_base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias2"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê2"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_variation_hierarquia_de_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos2"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_data_de_nascimento_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado.data_de_nascimento": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado.data_de_nascimento"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_de_nascimentos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_Tempo_de_casaanos": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.Tempo_de_casaanos": {
+			          "Target": {
+			            "Entity": "base_fake_dado.Tempo_de_casaanos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.Tempo_de_casaanos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_Tempo_de_casaanos"
+			        }
+			      ]
+			    },
+			    "medida_has_salario_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.salario_MoM": {
+			          "Target": {
+			            "Entity": "medida.salario_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.salario_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_salario_MoM"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_qtd_desligamentos": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.qtd_desligamentos": {
+			          "Target": {
+			            "Entity": "medida.qtd_desligamentos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_desligamentos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_qtd_desligamentos"
+			        }
+			      ]
+			    },
+			    "medida_has_Qtd_funcionarios_desligados_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.Qtd_funcionarios_desligados_MoM": {
+			          "Target": {
+			            "Entity": "medida.Qtd_funcionarios_desligados_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.Qtd_funcionarios_desligados_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_Qtd_funcionarios_desligados_MoM"
+			        }
+			      ]
+			    },
+			    "medida_has_Qtd_funcionarios_admitidos_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.Qtd_funcionarios_admitidos_MoM": {
+			          "Target": {
+			            "Entity": "medida.Qtd_funcionarios_admitidos_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.Qtd_funcionarios_admitidos_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_Qtd_funcionarios_admitidos_MoM"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_Tempo_de_casadias": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.Tempo_de_casadias": {
+			          "Target": {
+			            "Entity": "base_fake_dado.Tempo_de_casadias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.Tempo_de_casadias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_Tempo_de_casadias"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_vigente": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.vigente": {
+			          "Target": {
+			            "Entity": "base_fake_dado.vigente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.vigente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_vigentes"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_idade": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.idade": {
+			          "Target": {
+			            "Entity": "base_fake_dado.idade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.idade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_idades"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_data_demissão": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.data_demissão": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_demissão"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_demissão"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_data_demissãos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_data_admissao": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.data_admissao": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_admissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_admissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_data_admissaos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_setor_de_atuação": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.setor_de_atuação": {
+			          "Target": {
+			            "Entity": "base_fake_dado.setor_de_atuação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.setor_de_atuação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_setor_de_atuaçãos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.sexo": {
+			          "Target": {
+			            "Entity": "base_fake_dado.sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_sexos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_salário": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.salário": {
+			          "Target": {
+			            "Entity": "base_fake_dado.salário"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.salário"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_salários"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_cargo": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.cargo": {
+			          "Target": {
+			            "Entity": "base_fake_dado.cargo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.cargo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_cargoes"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_data_de_nascimento": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.data_de_nascimento": {
+			          "Target": {
+			            "Entity": "base_fake_dado.data_de_nascimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.data_de_nascimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_data_de_nascimentos"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.nome": {
+			          "Target": {
+			            "Entity": "base_fake_dado.nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_nome"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "base_fake_dado.ID": {
+			          "Target": {
+			            "Entity": "base_fake_dado.ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "base_fake_dado.ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_ID"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Name": {
+			              "Role": "base_fake_dado.ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ID_are_names_IDs_of_base_fake_dadoes"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_tempo_de_casa": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.tempo_de_casa": {
+			          "Target": {
+			            "Entity": "medida.tempo_de_casa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.tempo_de_casa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_tempo_de_casa"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_idade_media": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.idade_media": {
+			          "Target": {
+			            "Entity": "medida.idade_media"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.idade_media"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_idade_media"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_salario_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.salario_medio": {
+			          "Target": {
+			            "Entity": "medida.salario_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.salario_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_salario_medio"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_funcionarios_F": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.funcionarios_F": {
+			          "Target": {
+			            "Entity": "medida.funcionarios_F"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.funcionarios_F"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_funcionarios_F"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_funcionarios_M": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.funcionarios_M": {
+			          "Target": {
+			            "Entity": "medida.funcionarios_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.funcionarios_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_funcionarios_M"
+			        }
+			      ]
+			    },
+			    "base_fake_dado_has_medida_qtd_funcionarios": {
+			      "Binding": {
+			        "ConceptualEntity": "base_fake_dados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_fake_dado": {
+			          "Target": {
+			            "Entity": "base_fake_dado"
+			          }
+			        },
+			        "medida.qtd_funcionarios": {
+			          "Target": {
+			            "Entity": "medida.qtd_funcionarios"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_fake_dado"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_funcionarios"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_fake_dadoes_have_qtd_funcionarios"
 			        }
 			      ]
 			    },

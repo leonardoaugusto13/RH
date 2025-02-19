@@ -4,7 +4,7 @@ table Medidas
 	measure Qtd_funcionarios =
 			
 			COUNTROWS(base_fake_dados)
-		formatString: 0
+		formatString: #,0
 		lineageTag: d9ed6ed6-f17c-4ad0-a1c3-19c12fa05948
 
 	measure funcionarios_M = ```
@@ -42,9 +42,10 @@ table Medidas
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure TempoDeCasa = AVERAGE(base_fake_dados[Tempo_de_casa(Dias)])/365
+		formatString: 0
 		lineageTag: a884f082-6286-4a29-b154-4ebe59367f4f
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Qtd_funcionarios_admitidos MoM%' =
 			
