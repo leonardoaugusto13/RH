@@ -20,6 +20,8 @@ ref table DateTableTemplate_31a5b99c-b31d-4f52-b22b-c61e2113c589
 ref table LocalDateTable_4f323066-053c-4cc9-af01-2fa5064fe2fc
 ref table LocalDateTable_e6e72222-c7bf-4bbb-9ae9-cfc65829e0f0
 ref table LocalDateTable_5e999306-de29-4428-ae20-580ae0f8a378
+ref table LocalDateTable_8af3595d-32ce-4663-9195-97a7b9b1f1c0
+ref table LocalDateTable_331343b4-48fc-4b59-b99a-fcb49b61c877
 
 ref cultureInfo pt-BR
 

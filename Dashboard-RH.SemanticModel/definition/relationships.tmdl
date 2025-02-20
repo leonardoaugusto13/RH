@@ -13,3 +13,13 @@ relationship 5aced8b7-13f8-4dec-a090-7bd07787f1eb
 	fromColumn: base_fake_dados.data_demissão
 	toColumn: LocalDateTable_5e999306-de29-4428-ae20-580ae0f8a378.Date
 
+relationship a4e35787-5f59-4304-a217-026fc7f541e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: base_fake_dados.Data_atual
+	toColumn: LocalDateTable_8af3595d-32ce-4663-9195-97a7b9b1f1c0.Date
+
+relationship 6b0edf3a-1b9c-428c-ac8b-9bb2be13a103
+	joinOnDateBehavior: datePartOnly
+	fromColumn: base_fake_dados.Ultima_att_registro
+	toColumn: LocalDateTable_331343b4-48fc-4b59-b99a-fcb49b61c877.Date
+

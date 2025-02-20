@@ -29,7 +29,10 @@ table Medidas
 
 	measure salario_medio =
 			
-			AVERAGE(base_fake_dados[Salário])
+			CALCULATE(
+			    AVERAGE(base_fake_dados[Salário]),
+			    FILTER(base_fake_dados , base_fake_dados[Vigente] = "Ativo")
+			)
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: c444754b-4a68-40e5-b470-9775d13fd3a0
 
@@ -41,7 +44,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure TempoDeCasa = AVERAGE(base_fake_dados[Tempo_de_casa(Dias)])/365
+	measure TempoDeCasa = AVERAGE(base_fake_dados[Tempo_de_casa])
 		formatString: 0
 		lineageTag: a884f082-6286-4a29-b154-4ebe59367f4f
 
@@ -111,9 +114,19 @@ table Medidas
 				RETURN
 					DIVIDE([salario_medio] - __PREV_MONTH, __PREV_MONTH)
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 113bf8d9-77af-4cd0-a30a-460e78433fa3
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure soma_salario =
+			
+			CALCULATE(
+			SUM(base_fake_dados[Salário]),
+			FILTER(base_fake_dados , base_fake_dados[Vigente] = "Ativo")
+			)
+		formatString: "R$"#,0.00;-"R$"#,0.00;"R$"#,0.00
+		lineageTag: a4b67984-1e94-453c-b308-5416eb751eb6
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-BR"}
 
 	partition Medidas = m
 		mode: import

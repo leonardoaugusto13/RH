@@ -116,24 +116,46 @@ table base_fake_dados
 
 		annotation SummarizationSetBy = Automatic
 
-	column Tempo_de_casa(Dias)
+	column Data_atual
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 164238c9-d700-4dbc-958b-b92d63840d4f
+		summarizeBy: none
+		sourceColumn: Data_atual
+
+		variation Variation
+			isDefault
+			relationship: a4e35787-5f59-4304-a217-026fc7f541e6
+			defaultHierarchy: LocalDateTable_8af3595d-32ce-4663-9195-97a7b9b1f1c0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ultima_att_registro
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6c727ab9-678b-40b6-95b9-22f7230f2563
+		summarizeBy: none
+		sourceColumn: Ultima_att_registro
+
+		variation Variation
+			isDefault
+			relationship: 6b0edf3a-1b9c-428c-ac8b-9bb2be13a103
+			defaultHierarchy: LocalDateTable_331343b4-48fc-4b59-b99a-fcb49b61c877.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Tempo_de_casa
 		dataType: int64
 		formatString: 0
-		lineageTag: 8835c5be-7e2a-4172-bfed-309d3b28a42b
+		lineageTag: fd41f88c-2d1c-4dcc-b365-bc5b61741979
 		summarizeBy: sum
-		sourceColumn: Tempo_de_casa(Dias)
+		sourceColumn: Tempo_de_casa
 
 		annotation SummarizationSetBy = Automatic
-
-	column Tempo_de_casa(Anos) = ```
-			round(base_fake_dados[Tempo_de_casa(Dias)]/365,1) 
-			```
-		lineageTag: 75a8d47a-9ca7-455c-bcc8-3fb2488f444e
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition base_fake_dados = m
 		mode: import
@@ -173,15 +195,15 @@ table base_fake_dados
 				        each if [data_demissão] <> null then "Desligado" else "Ativo", 
 				        type text
 				    ),
+				    #"Personalização Adicionada" = Table.AddColumn(StatusVigente, "Data_atual", each DateTime.LocalNow()),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Data_atual", type date}}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Tipo Alterado", "Ultima_att_registro", each if [data_demissão] <> null then [data_demissão] else [Data_atual]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada",{{"Ultima_att_registro", type date}}),
 				
-				    // Calcula o tempo de casa em dias
-				    TempoDeCasa = Table.AddColumn(StatusVigente, "Tempo_de_casa(Dias)", 
-				        each try Duration.Days([data_demissão] - [Data_admissao]) otherwise null, 
-				        Int64.Type
-				    )
-				
+				    // Calcula a diferença em anos entre Ultima_att_registro e Data_admissao
+				    #"Diferença em Anos Adicionada" = Table.AddColumn(#"Tipo Alterado1", "Tempo_de_casa", each Number.Round(Duration.TotalDays([Ultima_att_registro] - [Data_admissao]) / 365), Int64.Type)
 				in
-				    TempoDeCasa
+				    #"Diferença em Anos Adicionada"
 				```
 
 	annotation PBI_NavigationStepName = Navegação
