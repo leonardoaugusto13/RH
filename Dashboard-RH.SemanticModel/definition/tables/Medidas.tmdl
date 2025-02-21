@@ -5,6 +5,7 @@ table Medidas
 			
 			COUNTROWS(base_fake_dados)
 		formatString: #,0
+		displayFolder: 😊Colaboradores
 		lineageTag: d9ed6ed6-f17c-4ad0-a1c3-19c12fa05948
 
 	measure funcionarios_M = ```
@@ -15,6 +16,7 @@ table Medidas
 			)
 			```
 		formatString: 0
+		displayFolder: 😊Colaboradores
 		lineageTag: 2cc4c6e8-d3e2-40c1-bc86-beac05a50946
 
 	measure funcionarios_F = ```
@@ -25,6 +27,7 @@ table Medidas
 			)
 			```
 		formatString: 0
+		displayFolder: 😊Colaboradores
 		lineageTag: 361b2be0-de68-462c-948f-a69047e2e534
 
 	measure salario_medio =
@@ -34,18 +37,21 @@ table Medidas
 			    FILTER(base_fake_dados , base_fake_dados[Vigente] = "Ativo")
 			)
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 🎲Calculos
 		lineageTag: c444754b-4a68-40e5-b470-9775d13fd3a0
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure idade_media = AVERAGE(base_fake_dados[Idade])
 		formatString: 0
+		displayFolder: 😊Colaboradores
 		lineageTag: f009bc72-4a61-4f19-a904-93e1fb3f44b4
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure TempoDeCasa = AVERAGE(base_fake_dados[Tempo_de_casa])
 		formatString: 0
+		displayFolder: 😊Colaboradores
 		lineageTag: a884f082-6286-4a29-b154-4ebe59367f4f
 
 		annotation PBI_FormatHint = {"isDecimal":true}
@@ -64,6 +70,7 @@ table Medidas
 					DIVIDE([Qtd_funcionarios] - __PREV_MONTH, __PREV_MONTH)
 			)
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 🎲Calculos
 		lineageTag: 3f19b10e-2e27-45d8-9034-86d9d20ae70a
 
 		extendedProperty MeasureTemplate =
@@ -87,6 +94,7 @@ table Medidas
 				RETURN
 					DIVIDE([Qtd_funcionarios] - __PREV_MONTH, __PREV_MONTH)
 			)
+		displayFolder: 🎲Calculos
 		lineageTag: f031cd7e-bf29-41da-abf9-4f465fe284eb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -99,6 +107,7 @@ table Medidas
 			    FILTER(base_fake_dados , base_fake_dados[data_demissão] <> BLANK()))
 			```
 		formatString: 0
+		displayFolder: 😊Colaboradores
 		lineageTag: 8c345f8f-568f-4f56-8657-220c5c3978bf
 
 	measure 'salario MoM%' =
@@ -115,6 +124,7 @@ table Medidas
 					DIVIDE([salario_medio] - __PREV_MONTH, __PREV_MONTH)
 			)
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 🎲Calculos
 		lineageTag: 113bf8d9-77af-4cd0-a30a-460e78433fa3
 
 	measure soma_salario =
@@ -124,6 +134,7 @@ table Medidas
 			FILTER(base_fake_dados , base_fake_dados[Vigente] = "Ativo")
 			)
 		formatString: "R$"#,0.00;-"R$"#,0.00;"R$"#,0.00
+		displayFolder: 🎲Calculos
 		lineageTag: a4b67984-1e94-453c-b308-5416eb751eb6
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-BR"}
