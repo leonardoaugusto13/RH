@@ -94,10 +94,9 @@ table Medidas
 				RETURN
 					DIVIDE([Qtd_funcionarios] - __PREV_MONTH, __PREV_MONTH)
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: 🎲Calculos
 		lineageTag: f031cd7e-bf29-41da-abf9-4f465fe284eb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Qtd_desligamentos = ```
 			
